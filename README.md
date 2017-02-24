@@ -1,5 +1,5 @@
 # note_ckgdoku
-Plugin to insert the note source code in dokuwiki using the ckgdoku editor (https://github.com/turnermm/ckgdoku).
+Plugin to insert the note plugin source code in dokuwiki using the ckgdoku editor (https://github.com/turnermm/ckgdoku).
 
 ## Installation
 Unzip the files to your `dokuwiki/lib/plugins/ckgedit/ckeditor/plugins/` folder and rename the folder to **note**.
