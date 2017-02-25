@@ -20,16 +20,27 @@ CKEDITOR.dialog.add( 'noteDialog', function( editor ) {
                         type: 'text',
                         id: 'note',
                         label: editor.lang.note.content,
-                        validate: CKEDITOR.dialog.validate.notEmpty( "Note field cannot be empty." )
+              			'default': ''
                     }
                 ]
             }
         ],
+		// Invoked when the dialog is loaded.
+		onShow: function() {
+			// Get the selection from the editor.    
+		    var text = editor.getSelection().getSelectedText();            
+            if(text) {                          
+                this.getContentElement( 'tab-basic', 'note').disable();
+                this.setValueOf( 'tab-basic', 'note',text);
+            }    
+               else this.text = false;
+		},       
+        
         onOk: function() {
             var dialog = this;
 
-            var note = editor.document.createElement( 'note' );
-            note.setAttribute( 'title', dialog.getValueOf( 'tab-basic', 'note' ) );
+          //    var note = editor.document.createElement( 'note' );  
+          //  note.setAttribute( 'title', dialog.getValueOf( 'tab-basic', 'note' ) );
 			
 			//get the note type
 			var noteTypeValue = dialog.getValueOf( 'tab-basic', 'notetype' );
@@ -42,7 +53,11 @@ CKEDITOR.dialog.add( 'noteDialog', function( editor ) {
 			}
 			
 			//get the note text
-			var noteText = dialog.getValueOf( 'tab-basic', 'note' );
+			var noteText = this.text ? this.text: dialog.getValueOf( 'tab-basic', 'note' );
+            if(!noteText) {
+                alert("Note cannot be left empty");
+                return false;
+            }
 			//insert the note
 			editor.insertText ( noteTypeValue + noteText + '</note>' )
 
