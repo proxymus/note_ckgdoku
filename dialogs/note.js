@@ -12,7 +12,7 @@ CKEDITOR.dialog.add( 'noteDialog', function( editor ) {
 						type: 'radio',
 						id: 'notetype',
 						label: editor.lang.note.selectOption,
-						items: [ [ '<img src="/lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_basic.png">', 'basic' ], [ '<img src="/lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_important.png">', 'important' ] , [ '<img src="/lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_tip.png">', 'tip' ] , [ '<img src="/lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_warning.png">', 'warning' ] ],
+						items: [ [ '<img src= "' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_basic.png">', 'basic' ], [ '<img src="' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_important.png">', 'important' ] , [ '<img src="' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_tip.png">', 'tip' ] , [ '<img src="' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_warning.png">', 'warning' ] ],
 						style: 'color: black',
 						'default': 'basic',
 					},
