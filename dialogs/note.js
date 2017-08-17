@@ -12,7 +12,7 @@ CKEDITOR.dialog.add( 'noteDialog', function( editor ) {
 						type: 'radio',
 						id: 'notetype',
 						label: editor.lang.note.selectOption,
-						items: [ [ '<img src= "' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_basic.png">', 'basic' ], [ '<img src="' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_important.png">', 'important' ] , [ '<img src="' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_tip.png">', 'tip' ] , [ '<img src="' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_warning.png">', 'warning' ] ],
+						items: [ [ '<img src= "' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_basic.png" alt="'+editor.lang.note.basic +'">', 'basic' ], [ '<img src="' + DOKU_BASE+ 'lib/p    lugins/ckgedit/ckeditor/plugins/note/icons/note_important.png" alt="'+editor.lang.note.important+'">', 'important' ] , [ '<img src="' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_tip.png" alt="'+editor.lang.note    .tip+'">', 'tip' ] , [ '<img src="' + DOKU_BASE+ 'lib/plugins/ckgedit/ckeditor/plugins/note/icons/note_warning.png" alt="'+editor.lang.note.warning+'">', 'warning' ] ],
 						style: 'color: black',
 						'default': 'basic',
 					},
