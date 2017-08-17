@@ -1,18 +1,13 @@
 # note_ckgdoku
-Plugin to insert the note plugin source code in dokuwiki using the ckgdoku editor (https://github.com/turnermm/ckgdoku / https://www.dokuwiki.org/plugin:ckgedit).
+Plugin to insert the note plugin source code in dokuwiki using the ckgdoku/ckgedit editor (https://github.com/turnermm/ckgdoku / https://www.dokuwiki.org/plugin:ckgedit).
 
 ## Installation
 Refer to: https://www.dokuwiki.org/plugin:ckgedit:configuration#extra_plugins.
-Unzip the files to your `dokuwiki/lib/plugins/ckgedit/ckeditor/plugins/` folder and rename the folder to **note**.
+Unzip the files to your `dokuwiki/lib/plugins/ckgedit/ckeditor/plugins/` or `dokuwiki/lib/plugins/ckgdoku/ckeditor/plugins/` folder and rename the folder to **note**.
 
 ## Dokuwiki configuration
 
-Add the text **Note** to the dokuwiki **plugin»ckgedit»extra_plugins** configuration.
-
-Edit the `dokuwiki/lib/plugins/ckgedit/ckeditor/config.js` file and add **note**.
-
-###Example:
-b.extraPlugins="signature,footnote,shortcuts,fontAssist,tags,timestamp,headerbuttons,**note**";
+Add the text **Note** to the dokuwiki **plugin»ckgedit»extra_plugins** or **plugin»ckgdoku»extra_plugins** configuration.
 
 ## Note: This plugin will work in either ckgdoku or ckgedit. 
 
